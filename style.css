@@ -12,7 +12,7 @@ html {
 
 .shown {
   display: block;
-  position: relative;
+  position: absolute;
   z-index: 1;
   left: 0;
   top: 0;
@@ -21,7 +21,7 @@ html {
   background-color: rgba(0, 0, 0, 0.8);
   border: 2px solid red;
 }
-.inner-modal{
+.inner-modal {
   position: absolute;
   z-index: 2;
   top: 25%;
@@ -38,7 +38,7 @@ html {
   height: 2rem;
 }
 
-.modal-p{
+.modal-p {
   text-align: center;
   margin-top: 20%;
   font-size: 5rem;
