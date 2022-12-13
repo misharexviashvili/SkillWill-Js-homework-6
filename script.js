@@ -28,3 +28,20 @@ document.querySelector(".btn").addEventListener("click", (e) => {
 });
 
 // Task 3
+let numbers;
+let array;
+document.querySelector(".btn-average").addEventListener("click", (e) => {
+  e.preventDefault();
+  numbers = document.querySelector(".input-average").value;
+  console.log(numbers);
+  array = numbers.split(":");
+  console.log(array);
+  let sum = 0;
+  for (let element of array) {
+    sum += parseInt(element);
+  }
+  console.log(sum);
+  const average = sum / array.length;
+  console.log(average);
+  return average;
+});
