@@ -3,8 +3,16 @@
 document.querySelector("#button").addEventListener("click", () => {
   document.querySelector(".hidden").classList.toggle("shown");
 });
-document.querySelector(".hidden").addEventListener("click", () => {
-  document.querySelector(".hidden").classList.remove("shown");
+document.querySelector(".hidden").addEventListener("click", (e) => {
+  console.log(e.target);
+  if (
+    e.target === document.querySelector(".inner-modal") ||
+    e.target === document.querySelector(".modal-p")
+  ) {
+    return;
+  } else {
+    document.querySelector(".hidden").classList.remove("shown");
+  }
 });
 
 // Task 2
@@ -33,15 +41,11 @@ let array;
 document.querySelector(".btn-average").addEventListener("click", (e) => {
   e.preventDefault();
   numbers = document.querySelector(".input-average").value;
-  console.log(numbers);
   array = numbers.split(":");
-  console.log(array);
   let sum = 0;
   for (let element of array) {
     sum += parseInt(element);
   }
-  console.log(sum);
   const average = sum / array.length;
-  console.log(average);
   return average;
 });
